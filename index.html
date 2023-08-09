@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mess Payment</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="const">
+    <hr>
+    <div class="men"><img class="kmcp" src="kmcpng.png">
+    </div>
+    <h2 id="kmchead" style="color:white">KHWAJA MOINUDDIN CHISTI LANGUAGE UNIVERSITY</h2>
+    <ul id="menu">
+      <a href="index.html" target="_blank">
+        <li>Home</li>
+      </a>
+      <a href="index.html" target="_blank">
+        <li>about us</li>
+      </a>
+      <a href="index.html" target="_blank">
+        <li>Placement Drive</li>
+      </a>
+      <a href="index.html" target="_blank">
+        <li>Syllabus</li>
+      </a>
+    </ul>
+  </div>
+  <hr>
+  <br><br><br><br>
+  <hr>
+  <div class="container">
+    <div class="header">
+      <h2 id="formhead">MESS PAYMENT</h2>
+    </div>
+    <form id="paymentForm" action="response.html" name="myform" onsubmit="validateForm()" method="post">
+      <div class="inputform">
+        <label for="name">Name:</label>
+        <input type="text" placeholder="enter name" class="inputbar" id="inp1" name="name"><b><span
+            class="formerror"></span></b>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="enter email" class="inputbar" id="inp2" name="email"><b><span
+            class="formerror"></span></b>
+        <label for="contact">Contact Number:</label>
+        <input type="number" placeholder="enter contact number" class="inputbar" id="inp3" name="contact"><b><span
+            class="formerror"></span></b>
+        <label for="enrollno">Enroll No:</label>
+        <input type="text" placeholder="enter enroll no" class="inputbar" id="inp4" name="enrollno"><b><span
+            class="formerror"></span></b>
+        <label for="roll no">Roll no:</label>
+        <input type="number" placeholder="enter roll no" class="inputbar" id="inp5" name="Roll no"><b><span
+            class="formerror"></span></b>
+        <label for="number">Payment Amount:</label>
+        <input type="number" placeholder="enter amount" class="inputbar" id="inp6" name="amount"><b><span
+            class="formerror"></span></b>
+      </div>
+      <div class="gende">
+        <label for="female" class="lab"><input type="radio" id="female" name="gender" value="female">female
+        </label>
+        <label for="male" class="lab"><input type="radio" id="male" name="gender" value="male">male
+        </label>
+        <label for="gender" class="lab"><input type="radio" id="gender" name="gender" value="transgender">transgender
+        </label>
+      </div><br>
+      <a href="alert.html" id="back">Back to Home</a>
+      <button class="btn-submit" name="Submit" id="sub" onclick="validateForm()">Submit</button>
+    </form>
+  </div>
+  <hr>
+  <script src="/index.js" rel="stylesheet"></script>
+</body>
+
+</html>
