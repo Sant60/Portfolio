@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins" sans-serif;
+}
+
+body {
+  background: fixed;
+  font-family: sans-serif;
+  background: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+/*---------------- Navigation CSS------------ */
+
+#navBar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  position: relative;
+  width: 100vw;
+  height: 6vh;
+  background: #ffffffd2;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+  /* border-bottom: 1px solid rgb(152, 152, 152); */
+}
+#logo {
+  min-width: 12em;
+  font-size: 1.4rem;
+  margin-left: 20px;
+  cursor: pointer;
+  position: static;
+}
+
+#navBar ul {
+  list-style: none;
+  justify-content: flex-end;
+  position: relative;
+  align-items: last baseline;
+  /* overflow: visible; */
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0 3vw -1% 2vw;
+}
+
+#navsearch {
+  width: 28em;
+  height: 3em;
+  border-bottom: 3px solid rgb(19, 153, 216);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: transparent;
+  color: #000000;
+  outline: none;
+  padding-inline-start: 0.5em;
+  outline-color: rgb(19, 153, 216);
+}
+#navBar #toggle {
+  margin-right: -10%;
+  font-size: 4vh;
+  display: none;
+  scale: 0;
+  cursor: pointer;
+}
+#dashBoard {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+#navBar ul li {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  gap: 2px;
+  width: 10rem;
+  padding-bottom: 3%;
+  height: 1.9rem;
+  text-align: center;
+}
+#navBar ul li:hover {
+  border-bottom: 3px solid rgb(19, 153, 216);
+  background: rgba(0, 238, 255, 0.109);
+}
+#navBar ul a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/*------------- main css -----------*/
+.main {
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+  display: flex;
+  background: transparent;
+}
+.main1 {
+  width: 50%;
+  height: 100%;
+  padding: 4vw 6vw;
+
+  background: transparent;
+}
+.main2 {
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  align-items: last baseline;
+  justify-content: center;
+}
+.main2 #wimg {
+  width: 100%;
+}
+.main1 h2 {
+  font-size: 3rem;
+  line-height: 7vw;
+}
+.main1 span {
+  color: rgb(19, 153, 216);
+}
+
+/*---------------- media query for responsive navbar------------------ */
+
+@media (max-width: 800px) {
+  #navBar ul li {
+    display: none;
+  }
+  .navbtn {
+    display: none;
+  }
+
+  #navBar #toggle {
+    display: block;
+    scale: 1;
+    margin-right: 20px;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .main .main1 {
+    width: 100%;
+    height: 50%;
+  }
+  .main .main2 {
+    width: 100%;
+    height: 50%;
+  }
+  .main1 h2 {
+    font-size: 8vw;
+    line-height: 10vw;
+  }
+
+  .sidebar .active {
+    left: 0;
+  }
+  .sidebar h2 {
+    position: absolute;
+    top: 1%;
+    cursor: pointer;
+    left: 10px;
+    font-size: 50px;
+  }
+}
+@media (min-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+}
+/* --------------------Sidebar CSS------------------ */
+.sidebar {
+  height: 100vh;
+  width: 50vw;
+  z-index: 2;
+  position: fixed;
+  left: -100%;
+  border-right: 2px solid rgb(19, 153, 216);
+  background: transparent;
+  backdrop-filter: blur(32px);
+  padding-top: 20px;
+  transition: left 0.3s ease;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  height: 70%;
+  margin: 10% 0 0 0;
+  position: relative;
+}
+
+.sidebar li {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.sidebar li:hover {
+  border-bottom: 3px solid rgb(19, 153, 216);
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+#sidecross {
+  color: rgb(19, 153, 216);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.first-text {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  padding-top: 27px;
+}
+.sec-text {
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+  color: #0ef;
+}
+.sec-text li {
+  position: relative;
+  top: 0;
+  font-size: 30px;
+  color: #0ef;
+  list-style: none;
+  padding: 0 20px;
+  text-shadow: 0 0 10px #0ef;
+  animation: slide 12s steps(4) infinite, colorful 6s infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+@keyframes colorful {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.sec-text li span {
+  position: relative;
+}
+.sec-text li span::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0.1%;
+  width: 600px;
+  height: 40px;
+  background: #ffffff;
+  border-left: 3px solid rgb(247, 9, 9);
+  animation: typing 1.5s steps(20) infinite alternate;
+}
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+#rmbtn {
+  width: 85px;
+  height: 35px;
+  background: rgb(7, 159, 169);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#rmbtn:hover {
+  background: #000;
+  color: white;
+}
